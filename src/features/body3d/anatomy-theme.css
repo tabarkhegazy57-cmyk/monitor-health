@@ -1,0 +1,49 @@
+/* ASTRA CARE skin for the Open Anatomy 3D viewer. `:root` keeps these above
+   the package's own dark-mode overrides; the app is light-only. */
+:root .astra-anatomy.oa3d-viewer {
+  --oa3d-accent: var(--primary);
+  --oa3d-accent-deep: var(--teal-deep);
+  --oa3d-on-accent: var(--primary-foreground);
+  --oa3d-surface: var(--card);
+  --oa3d-surface-sunken: var(--surface);
+  --oa3d-border: var(--border);
+  --oa3d-text: var(--foreground);
+  --oa3d-text-muted: var(--muted-foreground);
+  --oa3d-shadow: color-mix(in oklch, var(--teal-deep) 18%, transparent);
+  --oa3d-radius: 0px;
+  height: 100%;
+  gap: 0;
+}
+
+/* Fill the existing viewer panel instead of the package's fixed aspect box. */
+:root .astra-anatomy .oa3d-canvas {
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+:root .astra-anatomy .oa3d-hover-tag {
+  top: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in oklch, var(--card) 94%, transparent);
+  color: var(--foreground);
+  box-shadow: var(--elev-raised);
+  backdrop-filter: blur(6px);
+}
+
+:root .astra-anatomy .oa3d-hover-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+:root .astra-anatomy .oa3d-hover-hint {
+  color: var(--muted-foreground);
+  opacity: 1;
+}
+
+:root .astra-anatomy .oa3d-loading-text {
+  font-size: 0.75rem;
+}

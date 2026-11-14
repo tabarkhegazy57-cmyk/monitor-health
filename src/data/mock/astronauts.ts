@@ -1,0 +1,77 @@
+import type { Astronaut, Mission } from "@/types/domain";
+
+/** Fictional demo astronauts. Not real people. */
+export const MOCK_ASTRONAUTS: Astronaut[] = [
+  {
+    id: "AST-001",
+    name: "Lena Okafor",
+    rank: "Commander",
+    role: "Mission Commander",
+    agency: "Demo Space Agency",
+    initials: "LO",
+    bio: "Fictional demo profile. Leads the Selene-4 crew rotation aboard a lunar orbital outpost.",
+    missionId: "MSN-SELENE-4",
+  },
+  {
+    id: "AST-002",
+    name: "Mateo Rinaldi",
+    rank: "Flight Engineer",
+    role: "Flight Engineer",
+    agency: "Demo Space Agency",
+    initials: "MR",
+    bio: "Fictional demo profile. Runs life-support maintenance and research payloads in low Earth orbit.",
+    missionId: "MSN-HALCYON-71",
+  },
+  {
+    id: "AST-003",
+    name: "Hana Sato",
+    rank: "Mission Specialist",
+    role: "Mission Specialist, Medical Officer",
+    agency: "Demo Space Agency",
+    initials: "HS",
+    bio: "Fictional demo profile. Crew medical officer on a simulated deep-space transit toward Mars.",
+    missionId: "MSN-ARES-T2",
+  },
+];
+
+export const MOCK_MISSIONS: Mission[] = [
+  {
+    id: "MSN-SELENE-4",
+    name: "Selene-4",
+    vehicle: "Lunar orbital outpost",
+    destination: "Near-rectilinear halo orbit around the Moon",
+    phase: "Science operations",
+    launchDate: "2026-09-30",
+    missionDay: 46,
+    plannedDurationDays: 180,
+    crewSize: 4,
+    summary: "Long-duration crew rotation supporting lunar surface sorties and habitat research.",
+    commDelaySeconds: 1.3,
+  },
+  {
+    id: "MSN-HALCYON-71",
+    name: "Halcyon-71",
+    vehicle: "Low Earth orbit research station",
+    destination: "Low Earth orbit, ~410 km altitude",
+    phase: "Increment operations",
+    launchDate: "2026-07-26",
+    missionDay: 112,
+    plannedDurationDays: 190,
+    crewSize: 7,
+    summary: "Station increment focused on life-support maintenance and microgravity research.",
+    commDelaySeconds: null,
+  },
+  {
+    id: "MSN-ARES-T2",
+    name: "Ares Transit-2",
+    vehicle: "Deep-space transit habitat (simulated scenario)",
+    destination: "Earth–Mars transfer trajectory",
+    phase: "Outbound cruise",
+    launchDate: "2026-04-25",
+    missionDay: 203,
+    plannedDurationDays: 520,
+    crewSize: 4,
+    summary: "Simulated outbound cruise phase of a crewed Mars transit, testing crew autonomy.",
+    commDelaySeconds: 162,
+  },
+];
